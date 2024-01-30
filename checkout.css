@@ -1,0 +1,86 @@
+
+form {
+    width: 300px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin:auto;
+
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+}
+
+.card-icons {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 16px;
+}
+
+.card-icon {
+    width: 30px;
+    height: 20px;
+    object-fit: contain;
+}
+
+button {
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+.disclaimer {
+    font-size: 18px;
+    color: #555;
+    margin-top: 16px;
+    align-items: center;
+    justify-content: center;
+}
+.header {
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 80px;
+    background-color: rgb(26, 60, 91);
+    box-shadow: 0 5px 15px rgba(red, green, blue, alpha);
+    z-index: 999;
+    top: 0;
+    left: 0;
+    margin: auto;
+  }
+
+.headercheck {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%; /* Set the height to 100% */
+}
+
+.headercheck img {
+    max-height: 100%; 
+    margin:auto;/* Ensure the image doesn't exceed the height of its container */
+}
+
+#total-price {
+    width: 300px;
+    padding: 20px;
+    border-radius: 8px;
+    margin:auto;
+font-size: 25px;
+  }

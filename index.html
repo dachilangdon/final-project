@@ -1,32 +1,147 @@
-<!-- სასტუმროების ჯავშნის აპლიკაცია
-საიტზე შესვლისას
-1. მომხმარებელს დახვდება Landing Page, სადაც იქნება მოთხოვნადი (მაღალი
-შეფასებებით) სასტუმროების ჩამონათვალი ბანერი, ან სლაიდერი;
-2. მეორე სექციაზე უნდა იყოს ჩვენი სერვისები; დამატებით უნდა იყოს 3
-გვერდი
-a) სადაც ყველა სასტუმრო ჩანს;
-b) სასტუმროების დეტალური აღწერა;
-c) სასტუმროების რეზერვაცია
-d) 4.საიტი უნდა აიტვირთოს netlify-ზე
-1. CSS-ის არქიტექტურა უნდა იყოს დალაგებული
-2. აუცილებელია გამოიყენოთ CSS ანიმაციები, google-ს რომელიმე ფონტი;
-3. Html ელემენტების სტრუქტურა უნდა იყოს დალაგებული (აკრძალულია
-html ტეგებზე style ატრიბუტის გაწერა);
-4. უნდა მოიძიოთ პროექტთან დაკავშირებული API;
-5. ელემენტის ჩამატება, ამოღება, ცვლილება უნდა მოხდეს ჯავასკრიპტის
-DOM API საშუალებით. პროექტში უნდა იყოს dom events;
-6. სერვერთან კომუნიკაცია უნდა მოხდეს ასინქრონული ჯავასკრიპტის
-საშუალებით
-7. უნდა მოიძიოთ ან შექმნათ Fake API;
--->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>HomePage</title>
+    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Trirong">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
 <body>
-    beibeee beibe beibee ooo beeeibee
+    <section id="header">
+      <a href="#"><img id=logo src="https://www.fastpivot.com/wp-content/uploads/2014/02/shopify-logo.png" class="logo"></a>
+<div>
+    <ul id="navbar">
+        <li><a class="active" href="index.html"> Home </a></li>
+        <li><a href="product.html"> Products </a></li>
+        <li><a class="scroll-link" href="#footer">About Us</a></li>
+        <li><a href="checkout.html"> Checkout </a></li>
+        <li><a href="#"> <span class="material-symbols-outlined">
+            shopping_cart_checkout
+            </span> </a></li>
+    </ul>
+</div>
+    </section>
+    <section id="hero">
+            <h4> Trade In, Don't Be Late....</h4>
+            <h2> Super Duper Value  </h2>
+            <h1> On 70% Products and Deals </h1>
+            <p class="fire"> Save Money Now  </p>
+            <a href="product.html" class="button">Shop Now</a>
+    </section>
+    <div class="whyshop">
+        <h1>Why Shopify?</h1>
+    </div>
+    <h5 class="secondtitle">Shopify customer, always gets what he/she/they/them want</h5>
+    <section id="features" class="section-p1">
+        <div class="feat-box">
+            <img src="./img/free shipping.jpg">
+            <h6> Free Shipping </h6>
+        </div>
+        <div class="feat-box">
+            <img src="https://png.pngtree.com/png-vector/20231115/ourlarge/pngtree-save-money-icon-symbol-png-image_10609928.png">
+            <h6> Save Money </h6>
+        </div>
+        <div class="feat-box">
+            <img src="./img/promotion-grunge-rubber-stamp-illustration-with-long-shadow-business-concept-promotion-stamp-pictogram-vector.jpg">
+            <h6> Promotions </h6>
+        </div>
+        <div class="feat-box">
+            <img src="./img/24.jpg">
+            <h6> 24/7 Support </h6>
+        </div>
+        <div class="feat-box">
+            <img src="./img/6571b09f777f5e701d4378bd.webp">
+            <h6> Sulguni </h6>
+        </div>
+
+     </section>
+     <section id="products"><h1 class="thirdtitle">Best Selling Products on Shopify</h1>
+        <div id="gridContainer"></div>
+     </section>
+     <section id="banner" class="section m-1">
+        <h4>Guaranteed</h4>
+        <h2>Sales Up to <span>89.9%</span> on all products!</h2>
+        <button class="normal">Explore More</button>
+     </section>
+     <script src="index.js"></script>
+     <section id="arrivals" class="section pt-1">
+    <h2 class="thirdtitle">New Arrivals from 2024 Collection</h2>
+    <p class="secondtitle">Just when you made up your mind, it's gone... be fast</p>
+    <div id="gridContainer2" class="item-container"></div>
+     </section>
+     <section id="sm-banner" class="section-m1">
+        <div class="bannerbox">
+            <h4>Epatajuri Deals</h4>
+            <h2>Buy 3, get 2 of them for free</h2>
+            <span>Watches, Jewelery, Accesories, We got it all</span>
+            <button class="white">Learn More</button>
+        </div>
+        <div class="bannerbox bannerbox2">
+            <h4>Upcoming Deals</h4>
+            <h2>What you've been waiting for</h2>
+            <span>2024 best deals</span>
+            <button class="white">New Collection</button>
+        </div>
+     </section>
+     <section id="newsletter" class="section p-1 section m-1">
+        <div class="newstext">
+            <h4>Sign Up for Daily News</h4>
+            <p>Get updates about our latest deals and <span>special offers</span></p>
+        </div>
+        <div class="form">
+            <input type="text" placeholder="Your Email Address">
+            <button class="normal"> Sign Up </button>
+        </div>
+     </section>
+     <footer id="footer" class="section p-1">
+        <div class="col">
+            <img class="footershopify" src="https://www.fastpivot.com/wp-content/uploads/2014/02/shopify-logo.png">
+            <h4> Contact </h4>
+            <p><strong>Address </strong> Gacha Zveradze Str 223  </p>
+            <p><strong>Phone </strong> +14 (03) 992 225 299  </p>
+            <p><strong>Hours </strong> 10:00 Monday - Wednesday  </p>
+        <div class="follow">
+           <h4> Follow Us on Social Media</h4>
+        <div class="icon">
+            <a href="#" class="fa fa-facebook"></a>
+            <a href="#" class="fa fa-twitter"></a>
+            <a href="#" class="fa fa-instagram"></a>
+            <a href="#" class="fa fa-youtube"></a>
+           </div>
+          </div>
+        </div>
+        <div class="col">
+            <h4> About</h4>
+            <a href="#">About us</a>
+            <a href="#">Delivery</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms and Conditions</a>
+            <a href="#">Contact us</a>
+        </div>
+        <div class="col">
+            <h4> My account</h4>
+            <a href="#">Sign in</a>
+            <a href="#">My Cart</a>
+            <a href="#">Saved</a>
+            <a href="#">Order Tracking</a>
+            <a href="#">Customer Support</a>
+        </div>
+        <div class="col install">
+            <h4> Download our application</h4>
+            <p> From Google Play Only (We dont have much money)</p>
+            <div class="row">
+                <img class="icon" src="https://www.svgrepo.com/show/223032/playstore.svg">
+                <img class="icon"src="https://www.zdnet.com/a/img/2014/10/04/d57fe4cf-4ba3-11e4-b6a0-d4ae52e95e57/no-appstore.jpg">
+            </div>
+            <p> Secured Payments Powered By (No Mastercard)</p>
+            <img class="icon" src="https://image.similarpng.com/very-thumbnail/2020/06/Logo-visa-icon-PNG.png">
+        </div>
+        <div class="copyright"> © 2024 All rights abolished, Firefly Funhouse Inc.</div>
+     </footer>
+     <button id="scrollToTopBtn" title="Go to top">&#9650;</button>
+
 </body>
 </html>
